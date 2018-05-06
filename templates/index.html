@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<h1>Main page!!</h1>
+	<a href="/about">ссылка на другую страницу</a>
+	{% for post in posts %}
+		<h2>{{ post.text }}</h2>
+		<ul>
+			<li>{{ post.answers[0].text }}</li>
+			<li>{{ post.answers[1].text }}</li>
+			<li>{{ post.answers[2].text }}</li>
+			<li>{{ post.answers[3].text }}</li>
+		</ul>
+	{% endfor %}		
+{% endblock content %}
